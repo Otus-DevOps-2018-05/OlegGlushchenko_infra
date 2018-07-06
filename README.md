@@ -4,7 +4,7 @@ OlegGlushchenko Infra repository
 bastion_IP = 35.195.137.24
 someinternalhost_IP = 10.132.0.3
 
-testapp_IP = 35.198.167.169
+testapp_IP = 35.233.78.211
 testapp_port = 9292
 
 ### Дополнительное задание 1
