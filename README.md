@@ -9,7 +9,6 @@ testapp_port = 9292
 
 ### Дополнительное задание 1
 #### Листинг **startup script**:
-'''
     gcloud compute instances create reddit-app \
     --boot-disk-size=10GB \
     --image-family ubuntu-1604-lts \
@@ -32,16 +31,15 @@ testapp_port = 9292
     git clone -b monolith https://github.com/express42/reddit.git $mydir
     cd $mydir/reddit && bundle install
     puma -d'
-'''
 
 ### Дополнительное задание 2
 #### Удалить правило файера:
-'''
+
     gcloud compute firewall-rules delete default-puma-server
-'''
+
 
 #### Добавить правило файера:
-'''
+
     gcloud compute firewall-rules create default-puma-server \
         --network default \
         --action allow \
@@ -50,4 +48,4 @@ testapp_port = 9292
         --source-ranges 0.0.0.0/0 \
         --priority 50 \
         --target-tags puma-server
-'''
+
