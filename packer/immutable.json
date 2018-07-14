@@ -1,7 +1,12 @@
 {   
     "variables": {
+<<<<<<< HEAD
         "project_id": null,
         "source_image_family": null,
+=======
+        "project_id": "infra-1727374",
+        "source_image_family": "reddit-base",
+>>>>>>> 547b347f7496397c00f098480111d3acdf031a1b
         "machine_type": "f1-micro"
     },
     "builders": [
