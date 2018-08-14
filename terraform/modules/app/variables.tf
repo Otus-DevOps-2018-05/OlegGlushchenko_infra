@@ -21,5 +21,5 @@ variable "db_reddit_ip" {
 
 variable "provision_enabled" {
   description = "Provisioning on/off switch"
-  default     = true
+  default     = false
 }
