@@ -11,12 +11,28 @@ resource "google_compute_instance" "db" {
   }
 
   network_interface {
-    network       = "default"
+    network = "default"
+
     access_config = {}
   }
 
   metadata {
     ssh-keys = "appuser:${file(var.public_key_path)}"
+  }
+
+  provisioner "remote-exec" {
+    #script = "${path.module}/files/db.sh"
+    inline = [
+      "sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/g' /etc/mongod.conf",
+      "sudo systemctl restart mongod",
+    ]
+  }
+
+  connection {
+    type        = "ssh"
+    user        = "appuser"
+    agent       = false
+    private_key = "${file(var.private_key_path)}"
   }
 }
 

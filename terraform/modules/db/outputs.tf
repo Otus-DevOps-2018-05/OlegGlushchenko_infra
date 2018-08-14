@@ -1,1 +1,3 @@
-
+output "internal_ip" {
+  value = "${google_compute_instance.db.network_interface.0.address}"
+}
