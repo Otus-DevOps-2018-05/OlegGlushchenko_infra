@@ -17,7 +17,7 @@ module "app" {
   public_key_path   = "${var.public_key_path}"
   zone              = "${var.zone}"
   app_disk_image    = "${var.app_disk_image}"
-  db_reddit_ip      = "${module.db.internal_ip}"
+  db_reddit_ip      = "${module.db.db_internal_ip}"
   private_key_path  = "${var.private_key_path}"
   provision_enabled = "${var.provision_enabled}"
 }
