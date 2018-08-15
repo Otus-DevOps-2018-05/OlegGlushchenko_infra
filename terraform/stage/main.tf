@@ -19,7 +19,7 @@ module "app" {
   app_disk_image    = "${var.app_disk_image}"
   db_reddit_ip      = "${module.db.internal_ip}"
   private_key_path  = "${var.private_key_path}"
-  provision_enabled = true
+  provision_enabled = "${var.provision_enabled}"
 }
 
 module "vpc" {
