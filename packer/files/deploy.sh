@@ -14,6 +14,7 @@ WorkingDirectory=/usr/local/bin/reddit
 ExecStart=/usr/local/bin/puma
 [Install]
 WantedBy=multi-user.target
-EOF 
+EOF
+
 systemctl daemon-reload
 systemctl enable puma.service
