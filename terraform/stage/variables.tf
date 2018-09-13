@@ -29,3 +29,8 @@ variable db_disk_image {
   description = "Disk image for reddit db"
   default     = "reddit-db-base"
 }
+
+variable "provision_enabled" {
+  description = "On/Off provisioning in environment"
+  default     = false
+}

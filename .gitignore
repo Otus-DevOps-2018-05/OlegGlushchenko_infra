@@ -4,3 +4,16 @@ variables.json
 *.tfstate.backup
 *.tfvars
 .terraform/
+.vscode
+*.retry
+jdauphant.nginx
+vault.key
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
+vagrant_env
+.yamllint
